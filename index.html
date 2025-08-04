@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geschwindigkeitsmesser</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-oH+m3D9SHTA3gLMefr2zWxDx1Ds8R6BuG2jG3yZ9g54="
+        crossorigin=""
+    />
+</head>
+<body>
+    <h1>Geschwindigkeit und Navigation</h1>
+
+    <div class="container">
+        <!-- LINKE SPALTE -->
+        <div class="left-column">
+            <div class="speed-display">
+                <p><strong>Aktueller Kurs (°):</strong> <span id="heading">–</span></p>
+                <p><strong>km/h:</strong> <span id="speedKmh">0</span></p>
+                <p><strong>Knoten:</strong> <span id="speedKnots">0</span></p>
+            </div>
+
+            <div class="geo-display">
+                <p><strong>Längen-/Breitengrad:</strong> <a id="coordLink" href="#" target="_blank">–</a></p>
+
+
+                <button id="mobButton">MOB setzen</button>
+                <div class="mob-display">
+                    <p><strong>MOB Längen-/Breitengrad:</strong> <a href="#" id="mobCoords" target="_blank">–</a></p>
+                </div>
+            </div>
+
+            <div class="waypoint-display">
+                <h2>Wegpunkte (alle 30 Sekunden)</h2>
+                    <div class="button-group">
+                    <label for="intervalSelect">Intervall:</label>
+                    <select id="intervalSelect">
+                    <option value="5000">5 Sekunden</option>
+                    <option value="10000">10 Sekunden</option>
+                    <option value="30000" selected>30 Sekunden</option>
+                    <option value="60000">1 Minute</option>
+                    <option value="300000">5 Minuten</option>
+                    <option value="600000">10 Minuten</option>
+                    <option value="1800000">30 Minuten</option>
+                    <option value="3600000">1 Stunde</option>
+                    </select>
+                    <button id="startTracking">Start</button>
+                    <button id="stopTracking">Stop</button>
+                    <button id="generatePDF">PDF generieren</button>
+                    <button id="showTrack">Verlauf anzeigen</button>
+                    </div>
+
+                <div id="totalDistance" style="margin-bottom: 10px; font-weight: bold;">Gesamtweg: 0.00 km / 0.00 nm</div>
+                <ul id="waypointList"></ul>
+            </div>
+        </div>
+
+        <!-- RECHTE SPALTE -->
+        <div class="right-column">
+            <h2>⚓️ Anker</h2>
+            <button id="setAnchor">Anker setzen</button>
+            <div class="anchor-display">
+                <p><strong>Anker Längen-/Breitengrad:</strong> <a href="#" id="anchorCoords" target="_blank">–</a></p>
+                <p id="anchorStatus" class="anchor-safe">Status: Anker gesetzt</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" style="height: 400px; margin-top: 2em; border-radius: 10px;"></div>
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-oH+m3D9SHTA3gLMefr2zWxDx1Ds8R6BuG2jG3yZ9g54="
+        crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
