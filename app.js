@@ -29,6 +29,13 @@ function initMap(lat, lon) {
         attribution: "© OpenStreetMap",
     }).addTo(map);
 
+    
+    // Add OpenSeaMap layer
+    L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenSeaMap contributors',
+        transparent: true
+    }).addTo(map);
+
     userMarker = L.marker([lat, lon], { icon: shipIcon }).addTo(map).bindPopup("⛵ Du bist hier").openPopup();
 }
 
@@ -183,7 +190,7 @@ document.getElementById("setAnchor").addEventListener("click", () => {
 
         anchorMarker = L.marker([anchorLat, anchorLon], {
             icon: L.icon({
-                iconUrl: "./images/anker.png",
+                iconUrl: "./images/Anker.png",
                 iconSize: [25, 41],
                 iconAnchor: [12, 41],
             }),
