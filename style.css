@@ -1,0 +1,124 @@
+body {
+    font-family: sans-serif;
+    padding: 1em;
+    background: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 0.7;
+    min-width: 200px;
+    background: #f0f0f0;
+    padding: 1em;
+    border-radius: 6px;
+}
+
+.speed-display,
+.geo-display,
+.waypoint-display {
+    margin-bottom: 1.5em;
+}
+
+.mob-display,
+.anchor-display {
+    font-size: 0.9em;
+    margin-top: 1em;
+    background: #f0f0f0;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.waypoint-display ul {
+    list-style: none;
+    padding-left: 0;
+    max-height: 200px;
+    max-width: 500px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.waypoint-display li {
+    padding: 0.2em 0.5em;
+    border-bottom: 1px solid #eee;
+}
+
+.waypoint-display li:last-child {
+    border-bottom: none;
+}
+
+.anchor-safe {
+    color: green;
+}
+
+.anchor-alert {
+    color: red;
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+#map {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    border-top: 1px solid #ccc;
+}
+
+#waypointList {
+    max-height: 8em; /* passt etwa für 4 Einträge */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.active-start {
+    background-color: green;
+    color: white;
+}
+.active-stop {
+    background-color: red;
+    color: white;
+}
+.neutral {
+    background-color: #f0f0f0;
+    color: black;
+}
