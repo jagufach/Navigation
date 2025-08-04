@@ -191,8 +191,8 @@ document.getElementById("setAnchor").addEventListener("click", () => {
         anchorMarker = L.marker([anchorLat, anchorLon], {
             icon: L.icon({
                 iconUrl: "./images/Anker.png",
-                iconSize: [25, 41],
-                iconAnchor: [12, 41],
+                iconSize: [50, 50],
+                iconAnchor: [25, 25],
             }),
         }).addTo(map).bindPopup(`<strong>⚓️ Anker:</strong><br>📍 ${anchorLat.toFixed(6)}, ${anchorLon.toFixed(6)}`);
 
@@ -317,9 +317,9 @@ document.getElementById("showTrack").addEventListener("click", () => {
             const lon = parseFloat(lonStr);
 
             const markerIcon = L.icon({
-                iconUrl: "https://static.vecteezy.com/ti/gratis-vektor/p2/6114750-reisszwecke-mit-metallnadel-und-rotem-kopf-plastikkreis-reissnadel-auf-transparentem-hintergrund-buro-reisszwecke-fur-pinnwand-und-papier-an-der-wand-befestigen-isoliert-illustration-vektor.jpg",
-                iconSize: [25, 41],
-                iconAnchor: [12, 41],
+                iconUrl: "./images/pin.png",
+                iconSize: [30, 30],
+                iconAnchor: [12, 12],
                 popupAnchor: [1, -34],
             });
 
