@@ -1,5 +1,5 @@
 const shipIcon = L.icon({
-    iconUrl: './images/Segelschiff2.png',
+    iconUrl: './images/Segelschiff3.png',
     iconSize: [50, 50], // Größe des Icons
     iconAnchor: [25, 25], // Punkt in der Mitte des Icons
     popupAnchor: [0, -20] // Position des Popups über dem Icon
