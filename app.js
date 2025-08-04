@@ -183,7 +183,7 @@ document.getElementById("setAnchor").addEventListener("click", () => {
 
         anchorMarker = L.marker([anchorLat, anchorLon], {
             icon: L.icon({
-                iconUrl: "https://image.emojipng.com/438/943438.jpg",
+                iconUrl: "./images/anker.png",
                 iconSize: [25, 41],
                 iconAnchor: [12, 41],
             }),
