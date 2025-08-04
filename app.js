@@ -159,7 +159,7 @@ document.getElementById("mobButton").addEventListener("click", () => {
 
         mobMarker = L.marker([currentLat, currentLon], {
             icon: L.icon({
-                iconUrl: "./images/Rettungsring.png",
+                iconUrl: "./images/Rettungsring2.png",
                 iconSize: [25, 41],
                 iconAnchor: [12, 41],
             }),
