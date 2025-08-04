@@ -167,8 +167,8 @@ document.getElementById("mobButton").addEventListener("click", () => {
         mobMarker = L.marker([currentLat, currentLon], {
             icon: L.icon({
                 iconUrl: "./images/Rettungsring2.png",
-                iconSize: [25, 41],
-                iconAnchor: [12, 41],
+                iconSize: [41, 41],
+                iconAnchor: [25, 25],
             }),
         }).addTo(map).bindPopup(`<strong>❌ MOB:</strong><br>📍 ${currentLat.toFixed(6)}, ${currentLon.toFixed(6)}`);
 
@@ -191,7 +191,7 @@ document.getElementById("setAnchor").addEventListener("click", () => {
         anchorMarker = L.marker([anchorLat, anchorLon], {
             icon: L.icon({
                 iconUrl: "./images/Anker.png",
-                iconSize: [50, 50],
+                iconSize: [41, 41],
                 iconAnchor: [25, 25],
             }),
         }).addTo(map).bindPopup(`<strong>⚓️ Anker:</strong><br>📍 ${anchorLat.toFixed(6)}, ${anchorLon.toFixed(6)}`);
